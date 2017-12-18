@@ -8,23 +8,23 @@ Controller class manages a demo of ARKit hit testing.
 import Foundation
 import ARKit
 
-class HitTestVisualization {
+public class HitTestVisualization {
 	
-	var minHitDistance: CGFloat = 0.01
-	var maxHitDistance: CGFloat = 4.5
-	var xAxisSamples = 6
-	var yAxisSamples = 6
-	var fieldOfViewWidth: CGFloat = 0.8
-	var fieldOfViewHeight: CGFloat = 0.8
+	public var minHitDistance: CGFloat = 0.01
+    public var maxHitDistance: CGFloat = 4.5
+	public var xAxisSamples = 6
+	public var yAxisSamples = 6
+	public var fieldOfViewWidth: CGFloat = 0.8
+	public var fieldOfViewHeight: CGFloat = 0.8
 	
-	let hitTestPointParentNode = SCNNode()
-	var hitTestPoints = [SCNNode]()
-	var hitTestFeaturePoints = [SCNNode]()
+	fileprivate let hitTestPointParentNode = SCNNode()
+	fileprivate var hitTestPoints = [SCNNode]()
+	fileprivate var hitTestFeaturePoints = [SCNNode]()
 	
-	let sceneView: ARSCNView
-	let overlayView = LineOverlayView()
+	public let sceneView: ARSCNView
+	fileprivate let overlayView = LineOverlayView()
 	
-	init(sceneView: ARSCNView) {
+	public init(sceneView: ARSCNView) {
 		self.sceneView = sceneView
 		overlayView.backgroundColor = UIColor.clear
 		overlayView.frame = sceneView.frame
@@ -36,8 +36,7 @@ class HitTestVisualization {
 		overlayView.removeFromSuperview()
 	}
 	
-	func setupHitTestResultPoints() {
-		
+	internal func setupHitTestResultPoints() {
 		if hitTestPointParentNode.parent == nil {
 			self.sceneView.scene.rootNode.addChildNode(hitTestPointParentNode)
 		}
@@ -48,7 +47,7 @@ class HitTestVisualization {
 		}
 	}
 	
-	func render() {
+	public func render() {
 		
 		// Remove any old nodes,
 		hitTestPointParentNode.childNodes.forEach {
