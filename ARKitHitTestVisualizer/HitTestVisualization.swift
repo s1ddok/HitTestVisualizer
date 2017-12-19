@@ -42,8 +42,8 @@ public class HitTestVisualization {
 		}
 		
 		while hitTestPoints.count < xAxisSamples * yAxisSamples {
-            hitTestPoints.append(createCrossNode(size: 0.01, color:UIColor.blue, horizontal:false))
-            hitTestFeaturePoints.append(createCrossNode(size: 0.01, color:UIColor.yellow, horizontal:true))
+			hitTestPoints.append(createCrossNode(size: 0.01, color: .blue, horizontal: false))
+			hitTestFeaturePoints.append(createCrossNode(size: 0.01, color: .yellow, horizontal: true))
 		}
 	}
 	
@@ -109,9 +109,9 @@ public class HitTestVisualization {
 				
 				// Create a 2D line between the feature point and the hit test result to be drawn on the overlay view.
 				overlayView.addLine(start: screenPoint(for: hitTestPointPosition), end: screenPoint(for: featurePosition))
-                
 			}
 		}
+        
 		// Draw the 2D lines
 		DispatchQueue.main.async {
 			self.overlayView.setNeedsDisplay()
