@@ -42,8 +42,8 @@ public class HitTestVisualization {
 		}
 		
 		while hitTestPoints.count < xAxisSamples * yAxisSamples {
-			hitTestPoints.append(createCrossNode(size: 0.01, color:UIColor.blue, horizontal:false))
-			hitTestFeaturePoints.append(createCrossNode(size: 0.01, color:UIColor.yellow, horizontal:true))
+            hitTestPoints.append(createCrossNode(size: 0.01, color:UIColor.blue, horizontal:false))
+            hitTestFeaturePoints.append(createCrossNode(size: 0.01, color:UIColor.yellow, horizontal:true))
 		}
 	}
 	
@@ -109,7 +109,7 @@ public class HitTestVisualization {
 				
 				// Create a 2D line between the feature point and the hit test result to be drawn on the overlay view.
 				overlayView.addLine(start: screenPoint(for: hitTestPointPosition), end: screenPoint(for: featurePosition))
-				
+                
 			}
 		}
 		// Draw the 2D lines
@@ -121,33 +121,5 @@ public class HitTestVisualization {
 	private func screenPoint(for point: SCNVector3) -> CGPoint {
 		let projectedPoint = sceneView.projectPoint(point)
 		return CGPoint(x: CGFloat(projectedPoint.x), y: CGFloat(projectedPoint.y))
-	}
-}
-
-class LineOverlayView: UIView {
-	
-	struct Line {
-		var start: CGPoint
-		var end: CGPoint
-	}
-	
-	var lines = [Line]()
-	
-	func addLine(start: CGPoint, end: CGPoint) {
-		lines.append(Line(start: start, end: end))
-	}
-	
-	override func draw(_ rect: CGRect) {
-		super.draw(rect)
-		for line in lines {
-			let path = UIBezierPath()
-			path.move(to: line.start)
-			path.addLine(to: line.end)
-			path.close()
-			UIColor.red.set()
-			path.stroke()
-			path.fill()
-		}
-		lines.removeAll()
 	}
 }

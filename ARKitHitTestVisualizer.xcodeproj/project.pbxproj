@@ -11,6 +11,7 @@
 		088C0B211FE817640098BF4A /* HitTestVisualization+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088C0B1F1FE817630098BF4A /* HitTestVisualization+Utilities.swift */; };
 		088C0B221FE817640098BF4A /* HitTestVisualization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088C0B201FE817630098BF4A /* HitTestVisualization.swift */; };
 		088C0B241FE817EB0098BF4A /* SCNMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088C0B231FE817EB0098BF4A /* SCNMath.swift */; };
+		088C0B261FE9C3390098BF4A /* LineOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 088C0B251FE9C3390098BF4A /* LineOverlayView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		088C0B1F1FE817630098BF4A /* HitTestVisualization+Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HitTestVisualization+Utilities.swift"; sourceTree = "<group>"; };
 		088C0B201FE817630098BF4A /* HitTestVisualization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HitTestVisualization.swift; sourceTree = "<group>"; };
 		088C0B231FE817EB0098BF4A /* SCNMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNMath.swift; sourceTree = "<group>"; };
+		088C0B251FE9C3390098BF4A /* LineOverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineOverlayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				088C0B201FE817630098BF4A /* HitTestVisualization.swift */,
+				088C0B251FE9C3390098BF4A /* LineOverlayView.swift */,
 				088C0B1F1FE817630098BF4A /* HitTestVisualization+Utilities.swift */,
 				088C0B231FE817EB0098BF4A /* SCNMath.swift */,
 				088C0B171FE8174D0098BF4A /* ARKitHitTestVisualizer.h */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				088C0B221FE817640098BF4A /* HitTestVisualization.swift in Sources */,
+				088C0B261FE9C3390098BF4A /* LineOverlayView.swift in Sources */,
 				088C0B211FE817640098BF4A /* HitTestVisualization+Utilities.swift in Sources */,
 				088C0B241FE817EB0098BF4A /* SCNMath.swift in Sources */,
 			);
